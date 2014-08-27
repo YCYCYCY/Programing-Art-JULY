@@ -14,8 +14,8 @@ int LongestPalindrome(const char *s,int n)
 		for(length=0;(mid-length>=0)&&(mid+length<n);++length)
 			if(s[mid-length]!=s[mid+length])
 			break;
-		if(length*2+1>max)
-			max=length*2+1;
+		if(length*2-1>max)
+			max=length*2-1;
 		//以mid为中心，长度为偶数
 		for(length=0;(mid-length>=0)&&(mid+length+1<n);++length)
 			if(s[mid-length]!=s[mid+length+1])
